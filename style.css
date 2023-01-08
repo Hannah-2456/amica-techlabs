@@ -4,6 +4,20 @@
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
+h1 {
+    color: orange;
+    font-size: 30px;
+    position: relative;
+    text-align: center;
+    padding-top: 60px;
+    padding-bottom: 40px;
+}
+
+p {
+    font-size: 25px;
+    color: darkgrey;
+    text-align: center;
+}
 
 .container{
     width: 100%;
@@ -29,7 +43,7 @@
 .form-box h1{
     color: orange;
     font-size: 30px;
-    margin-bottom: 60px;
+    margin: 60px;
     position: relative;
 }
 
@@ -108,4 +122,13 @@ form p a{
 .btn-field button.disable{
     background: #999;
     color: #555;
+}
+
+img 
+{
+display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 20px;
 }
