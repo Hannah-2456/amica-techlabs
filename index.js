@@ -16,3 +16,15 @@ signupBtn.onclick = function(){
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
 }
+
+const radio = document.querySelectorAll('input[type="radio"]');
+
+radio.forEach(radio => {
+    radio.addEventListener('change', e => {
+        radios.forEach(r => {
+            if (r !== radio) {
+                r.checked = false;
+            }
+        });
+    });
+});

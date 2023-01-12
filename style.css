@@ -148,12 +148,15 @@ img
 
 .register-field{
     font-size: 15px;
-    padding: 15px;
+    padding: 18px 15px;
     margin: 10px 0;
     font-size: 18px;
     box-sizing: border-box;
-    border-radius: 6px;
-    
+    border-radius: 3px;
+    background: orange;
+    overflow: hidden;
+    align-items: center;
+        display: flex;
     
 }
 
@@ -163,11 +166,7 @@ select {
     border-radius: 10px;
 }
 
-input {
-    width: 100%;
-    background: transparent;
-    border: 0;
-    outline: 0;
-    padding: 18px 20px;
-
+.radio input{
+   align-items: center;
+   display: flex;
 }

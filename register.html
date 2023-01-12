@@ -23,27 +23,27 @@
       with someone that could be your potential friend! </p>
       
       <div class="register-box">
-      <form action="/example.html" method="POST">
+      <form action="/home.html" method="POST">
 
         <div class="register-field">
-        <label for="age"> Please type in your age: </label>
-        <input id="years" name="years" type="number" step="1">
+        <label for="age"> Please define your age: </label>
+        <input type="date" id="birthday" name="birthday" placeholder="Type in your age in years" required>
         </div>
 <hr>
 <div class="register-field">
           <span>Please define your gender</span>
           <br>
-          <input type="radio" id="female" name="female" value="female">        
+          <input type="radio" id="female" name="gender" value="female">        
           <label for="female">female</label>
-          <input type="radio" id="male" name="male" value="male">        
+          <input type="radio" id="male" name="gender" value="male">        
           <label for="male">male</label>
-          <input type="radio" id="norespond" name="norespond" value="norespond">        
+          <input type="radio" id="norespond" name="gender" value="norespond">        
           <label for="norespond">Prefer not to respond</label>
 </div>
 <hr>
 <div class="register-field">
   <label for="location">Where in Copenhagen do you live?</label>
-  <select id="location" name="location">
+  <select id="location" name="location" required>
     <option value="Vesterbro">Vesterbro</option>
     <option value="Valby">Valby</option>
     <option value="Nørrebro">Nørrebro</option>
@@ -70,17 +70,17 @@
           <label for="Reading">Reading</label>
           <input type="checkbox" name="Concerts" id="Concerts" value="Concerts">
           <i class="fa-solid fa-music"></i>
-          <label for="Concerts">Concerts</label>
+          <label for="Concerts">Concerts</label> 
   </div>
 <hr>
   <div class="register-field">
           <span>With how many people do like to be matched with for the start?</span>
           <br>
-          <input type="radio" id="1" name="1" value="1">        
+          <input type="radio" id="1" name="matches" value="1">        
           <label for="1">1</label>
-          <input type="radio" id="2" name="2" value="2">        
+          <input type="radio" id="2" name="matches" value="2">        
           <label for="2">2</label>
-          <input type="radio" id="3" name="3" value="3">        
+          <input type="radio" id="3" name="matches" value="3">        
           <label for="3">3</label>
   </div>
    <div class="btn-field">
