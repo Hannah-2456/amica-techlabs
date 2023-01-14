@@ -155,18 +155,10 @@ img
     border-radius: 3px;
     background: orange;
     overflow: hidden;
-    align-items: center;
-        display: flex;
-    
 }
 
 select {
     width: 100%;
     padding: 10px;
     border-radius: 10px;
-}
-
-.radio input{
-   align-items: center;
-   display: flex;
 }
