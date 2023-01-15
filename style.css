@@ -186,3 +186,40 @@ select {
     border-radius: 10px;
     background-color: #D9D9D9;
 }
+
+.action-field
+{
+    width: 90%;
+        max-width: 500px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: #EC3C54;
+        padding: 50px 60px 70px;
+        text-align: center;
+        
+            display: flex;
+            justify-content: space-between;
+}
+.action-button button {
+    background: #F09C14;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100px;
+    color: #000;
+    border-radius: 10px;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: background 1s;
+    margin-left: auto;
+     margin-right: auto;
+}
+
+button i {
+    margin-right: 5px;
+    background: #F09C14;
+}
