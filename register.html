@@ -12,6 +12,7 @@
         ></script>
     </head>
     <body>
+        <div class="container"></div>
         <img id="logo"
              src="Amica01.png"
              alt="Amica Logo"
@@ -19,30 +20,30 @@
         />
 
         <div class="register-box">
-            <form action="home.html" method="GET">
-                <h1>Welcome to Amica!</h1>
+            <form action="home.html" method="POST">
+                <h1 id="registerTitle">Welcome to Amica, USER!</h1>
                 <h2>First of all, we require some information from you to be able to match you
                     with someone that could become your friend: </h2>
                 <div class="register-field">
-                    <label for="birthday"> Please define your age: </label>
-                    <input type="date" id="birthday" name="birthday" placeholder="Type in your age in years" required>
+                    <label for="birthday"> Please provide your birthday: </label>
+                    <input type="date" id="birthday" name="birthday" required>
                 </div>
                 <hr>
                 <div class="register-field">
                     <span>Please define your gender</span>
                     <br/>
-                    <input type="radio" id="female" name="gender" value="female">
                     <label for="female">female</label>
-                    <input type="radio" id="male" name="gender" value="male">
+                    <input type="radio" id="female" name="gender" value="female">
                     <label for="male">male</label>
-                    <input type="radio" id="norespond" name="gender" value="norespond">
+                    <input type="radio" id="male" name="gender" value="male">
                     <label for="norespond">Prefer not to respond</label>
+                    <input type="radio" id="norespond" name="gender" value="norespond">
                 </div>
                 <hr>
                 <div class="register-field">
                     <label for="location">Where in Copenhagen do you live?</label>
                     <select id="location" name="location" required>
-                        <option value="Vesterbro">Vesterbro</option>
+                        <option value="Vesterbro" selected>Vesterbro</option>
                         <option value="Valby">Valby</option>
                         <option value="Nørrebro">Nørrebro</option>
                         <option value="Østerbro">Østerbro</option>
@@ -88,10 +89,11 @@
                     <input type="radio" id="n3" name="num_matches" value="3">
                 </div>
                 <div class="btn-field">
-                    <button type="submit" value="submit" id="submitreg">Submit</button>
+                    <button type="submit" value="submit" id="submitReg">Submit</button>
                 </div>
             </form>
         </div>
-        <script src="index.js"></script>
+        <script src="datamodel.js"></script>
+        <script src="register.js"></script>
     </body>
 </html>
