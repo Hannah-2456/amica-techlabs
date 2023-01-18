@@ -5,6 +5,7 @@ if (window.localStorage.getItem("registeringUser")) {
     window.location = "index.html"
 }
 
+const homeTitle = document.getElementById("homeTitle")
 const currentUser = JSON.parse(window.localStorage.getItem("currentUser"))
 
-console.log(currentUser)
+homeTitle.innerText = homeTitle.innerText.replace("USER", currentUser.firstName + " " + currentUser.lastName)
