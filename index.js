@@ -1,43 +1,33 @@
-let signupBtn = document.getElementById("signupBtn")
-let signinBtn = document.getElementById("signinBtn")
-let firstNameField = document.getElementById("firstNameField")
-let lastNameField = document.getElementById("lastNameField")
-let confirmPasswordField = document.getElementById("confirmPasswordField")
-let title = document.getElementById("title")
-let intro = document.getElementById("intro")
+const signupBtn = document.getElementById("signupBtn")
+const firstNameField = document.getElementById("firstNameField")
+const lastNameField = document.getElementById("lastNameField")
+const userNameField = document.getElementById("nameField")
+const emailField = document.getElementById("emailField")
+const passwordField = document.getElementById("passwordField")
 
-signinBtn.onclick = function(){
-    firstNameField.style.maxHeight = "0";
-    lastNameField.style.maxHeight = "0";
-    confirmPasswordField.style.maxHeight = "0";
-    title.innerHTML = "Log In";
-    intro.innerHTML = "Welcome to Amica";
-    signupBtn.classList.add("disable");
-    signinBtn.classList.remove("disable");
+signupBtn.onclick = function () {
+    window.localStorage.clear()
+    const user = new User(firstNameField.value, lastNameField.value, userNameField.value, emailField.value, passwordField.value)
+    window.localStorage.setItem("currentUser", JSON.stringify(user))
 }
 
-signupBtn.onclick = function(){
-    firstNameField.style.maxHeight = "60px";
-    lastNameField.style.maxHeight = "60px";
-    confirmPasswordField.style.maxHeight = "60px";
-    title.innerHTML = "Sign Up";
-    intro.innerHTML = "Join us and find new connections in your area. Create your free Amica account";
-    signupBtn.classList.remove("disable");
-    signinBtn.classList.add("disable");
+//Redirect logged-in users
+if (window.localStorage.getItem("currentUser")) {
+    window.location = "home.html"
 }
 
 class User {
     // Class to create a new user
-    constructor(name, age, interests, location, num_matches) {
-        this.name = name;
+    constructor(firstName, lastName, userName, email, password, age, interests, location, num_matches) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.userName = userName;
+        this.email = email;
+        this.password = password;
         this.age = age;
         this.interests = interests;
         this.location = location;
         this.num_matches = num_matches;
-    }
-
-    toString() {
-        return this.name;
     }
 }
 
@@ -110,7 +100,7 @@ class MatchMaker {
         }
     }
 
-       removeMatch(user, otherUser) {
+    removeMatch(user, otherUser) {
         // Find the current matches for user
         if (user in this.matches) {
             let matches = this.matches[user];
