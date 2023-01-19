@@ -1,11 +1,12 @@
 class User {
     // Class to create a new user
-    constructor(firstName, lastName, userName, email, password, age, interests, location, num_matches) {
+    constructor(firstName, lastName, userName, email, password, gender, age, interests, location, num_matches) {
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.password = password;
+        this.gender = gender;
         this.age = age;
         this.interests = interests;
         this.location = location;
@@ -81,51 +82,96 @@ class MatchMaker {
             this.score[user] = userMatches.slice(0, user.num_matches).map(match => match[1]);
         }
     }
-
-    removeMatch(user, otherUser) {
-        // Find the current matches for user
-        if (user in this.matches) {
-            let matches = this.matches[user];
-            // If otherUser is in the matches list, remove it
-            let index = matches.indexOf(otherUser);
-            if (index !== -1) {
-                matches.splice(index, 1);
-                this.matches[user] = matches;
-
-                let scores = this.score[user];
-                scores.splice(index, 1);
-                this.score[user] = scores;
-            }
-        }
-
-        // remove the match from the other_user
-        if (otherUser in this.matches) {
-            let otherMatches = this.matches[otherUser];
-            let index = otherMatches.indexOf(user);
-            if (index !== -1) {
-                otherMatches.splice(index, 1);
-                this.matches[otherUser] = otherMatches;
-
-                let otherScores = this.score[otherUser];
-                otherScores.splice(index, 1);
-                this.score[otherUser] = otherScores;
-            }
-        }
-    }
-
-    deleteAccount(user) {
-        // Remove user from the users list
-        let index = this.users.indexOf(user);
-        if (index !== -1) {
-            this.users.splice(index, 1);
-        }
-
-        // Remove user from the matches object
-        if (user in this.matches) {
-            delete this.matches[user];
-        }
-        if (user in this.score) {
-            delete this.score[user];
-        }
-    }
 }
+
+function getRandomFromArray(items) {
+    return items[Math.floor(Math.random()*items.length)];
+}
+
+function getRandomDate(start, end) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
+const firstNames = [
+    "Chandler",
+    "Jaydin",
+    "Mila",
+    "Marisa",
+    "Shea",
+    "Toby",
+    "Jaron",
+    "Scarlett",
+    "Maliyah",
+    "Micheal",
+    "Vance",
+    "Jonah",
+    "Alessandra",
+    "Ella",
+    "Mercedes",
+    "Theresa",
+    "Aryanna",
+    "Anabelle",
+    "Lucian",
+    "Lillianna",
+    "Mireya",
+    "Korbin",
+    "Leilani",
+    "Tanya",
+    "Ayden",
+    "Laurel",
+    "William",
+    "Manuel",
+    "Cristal",
+    "Maurice"
+]
+
+const lastNames = [
+    "Woodard",
+    "Dodson",
+    "Mayo",
+    "Cummings",
+    "Gray",
+    "Morgan",
+    "Graves",
+    "Mack",
+    "Stark",
+    "Hartman",
+    "West",
+    "Brooks",
+    "Trevino",
+    "Newman",
+    "Shea",
+    "Ayers",
+    "Ashley",
+    "Ford",
+    "Kaufman",
+    "Perkins",
+    "Lambert",
+    "Roth",
+    "Griffin",
+    "Montes",
+    "Hunt",
+    "Tate",
+    "Avery",
+    "Wallace",
+    "Walker",
+    "Prince"
+]
+
+const allInterests = [
+    "Coffee or Tea",
+    "Going for walks",
+    "Cooking",
+    "Reading",
+    "Concerts",
+    "Theater",
+    "Sports"
+]
+
+const allLocations = [
+    "Vesterbro",
+    "Valby",
+    "Nørrebro",
+    "Østerbro",
+    "Amager"
+]

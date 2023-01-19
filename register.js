@@ -8,16 +8,6 @@ const noGenderChoice = document.getElementById("norespond")
 
 const locationSelect = document.getElementById("location")
 
-const interestSelections = [
-    "Coffee or Tea",
-    "Going for walks",
-    "Cooking",
-    "Reading",
-    "Concerts",
-    "Theater",
-    "Sports"
-]
-
 const oneMatchSelect = document.getElementById("n1")
 const twoMatchesSelect = document.getElementById("n2")
 const threeMatchesSelect = document.getElementById("n3")
@@ -52,7 +42,7 @@ submitReg.onclick = function () {
 
     registeringUser.location = locationSelect.value
     registeringUser.interests = []
-    for (const interest of interestSelections) {
+    for (const interest of allInterests) {
         if (document.getElementById(interest).checked) {
             registeringUser.interests.push(interest)
         }

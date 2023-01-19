@@ -1,77 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="style.css"/>
-    <title>Document</title>
-    <script
-            src="https://kit.fontawesome.com/656b90b3b2.js"
-            crossorigin="anonymous"
-    ></script>
-</head>
-<body>
-<div class="container"></div>
-<div class="form-box">
-    <img
-            id="logo"
-            src="Amica01.png"
-            alt="Amica Logo"
-            style="width: 100px; height: 100px"
-    />
-    <h2 id="intro">Join us and find new connections in your area. Create your free Amica account</h2>
-    <h1 id="title">Sign up</h1>
-    <form action="/home.html" method="POST">
-        <div class="input-group">
-            <div class="input-field">
-                <label for="firstNameField"><i class="fa-regular fa-user"></i></label>
-                <input id="firstNameField" type="text" placeholder="First name" required/>
-            </div>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <link rel="stylesheet" href="style.css"/>
+        <title>Amica</title>
+        <script
+                src="https://kit.fontawesome.com/656b90b3b2.js"
+                crossorigin="anonymous"
+        ></script>
+    </head>
+    <body>
+    <div class="container"></div>
+    <div class="form-box">
+        <img
+                id="logo"
+                src="Amica01.png"
+                alt="Amica Logo"
+                style="width: 100px; height: 100px"
+        />
+        <h2 id="intro">Join us and find new connections in your area. Create your free Amica account</h2>
+        <h1 id="title">Sign up</h1>
+        <form action="/home.html" method="POST">
+            <div class="input-group">
+                <div class="input-field">
+                    <label for="firstNameField"><i class="fa-regular fa-user"></i></label>
+                    <input id="firstNameField" type="text" placeholder="First name" required/>
+                </div>
 
-            <div class="input-field">
-                <label for="lastNameField"><i class="fa-regular fa-user"></i></label>
-                <input id="lastNameField" type="text" placeholder="Last name" required/>
-            </div>
+                <div class="input-field">
+                    <label for="lastNameField"><i class="fa-regular fa-user"></i></label>
+                    <input id="lastNameField" type="text" placeholder="Last name" required/>
+                </div>
 
-            <div class="input-field">
-                <label for="nameField"><i class="fa-regular fa-user"></i></label>
-                <input id="nameField" type="text" placeholder="User name" required/>
-            </div>
+                <div class="input-field">
+                    <label for="nameField"><i class="fa-regular fa-user"></i></label>
+                    <input id="nameField" type="text" placeholder="User name" required/>
+                </div>
 
-            <div class="input-field">
-                <label for="emailField"><i class="fa-regular fa-envelope"></i></label>
-                <input id="emailField" type="email" placeholder="Email" required/>
-            </div>
+                <div class="input-field">
+                    <label for="emailField"><i class="fa-regular fa-envelope"></i></label>
+                    <input id="emailField" type="email" placeholder="Email" required/>
+                </div>
 
-            <div class="input-field">
-                <label for="passwordField"><i class="fa-solid fa-lock"></i></label>
-                <input id="passwordField" type="password" placeholder="Password" required/>
-            </div>
-            <p></p>
+                <div class="input-field">
+                    <label for="passwordField"><i class="fa-solid fa-lock"></i></label>
+                    <input id="passwordField" type="password" placeholder="Password" required/>
+                </div>
+                <p></p>
 
-            <div class="input-field">
-                <label for="confirmPasswordField"><i class="fa-solid fa-lock"></i></label>
-                <input id="confirmPasswordField"
-                        type="password"
-                        placeholder="Confirm your password"
-                        required
-                />
+                <div class="input-field">
+                    <label for="confirmPasswordField"><i class="fa-solid fa-lock"></i></label>
+                    <input id="confirmPasswordField"
+                            type="password"
+                            placeholder="Confirm your password"
+                            required
+                    />
+                </div>
+                <p>
+                    Forgot your password? <a href="#"> Set up a new password here</a>
+                </p>
             </div>
-            <p>
-                Forgot your password? <a href="#"> Set up a new password here</a>
-            </p>
-        </div>
-        <div class="btn-field">
-            <button type="submit" formaction="register.html" id="signupBtn">
-                Sign up
-            </button>
-            <button type="button" id="signinBtn" class="disable" disabled>Log in</button>
-        </div>
-    </form>
-</div>
-<!-- put script for JS at end of body section -->
-<script src="datamodel.js"></script>
-<script src="index.js"></script>
-</body>
+            <div class="btn-field">
+                <button type="submit" formaction="register.html" id="signupBtn">
+                    Sign up
+                </button>
+                <button type="button" id="signinBtn" class="disable" disabled>Log in</button>
+            </div>
+        </form>
+    </div>
+    <!-- put script for JS at end of body section -->
+    <script src="datamodel.js"></script>
+    <script src="index.js"></script>
+    </body>
 </html>
