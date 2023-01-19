@@ -11,37 +11,41 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <img id="logo"
       src="Amica01.png"
       alt="Amica Logo"
-      style="width: 100px; height: 100px"
-    />
-    
-      
+      style="width: 100px; height: 100px" />
+
       <div class="register-box">
-      <form action="/register.html" method="POST">
-<h1>Welcome to Amica!</h1>
-    <h2>First of all, we require some information from you to be able to match you
-      with someone that could become your friend: </h2>
+      <form action="/reg_data.php" method="GET">
+        <h1>Welcome to Amica!</h1>
+        <h2>First of all, we require some information from you to be able to match you with someone that could become your friend: </h2>
         <div class="register-field">
         <label for="age"> Please define your age: </label>
         <input type="date" id="birthday" name="birthday" placeholder="Type in your age in years" required>
         </div>
+
 <hr>
+
 <div class="register-field">
           <span>Please define your gender</span>
           <br>
           <input type="radio" id="female" name="gender" value="female">        
-          <label for="female">female</label>
+          <label for="female">Female</label>
           <input type="radio" id="male" name="gender" value="male">        
-          <label for="male">male</label>
+          <label for="male">Male</label>
           <input type="radio" id="norespond" name="gender" value="norespond">        
           <label for="norespond">Prefer not to respond</label>
 </div>
+
 <hr>
+
 <div class="register-field">
   <label for="location">Where in Copenhagen do you live?</label>
+  <br>
+  <br>
   <select id="location" name="location" required>
     <option value="Vesterbro">Vesterbro</option>
     <option value="Valby">Valby</option>
@@ -50,7 +54,9 @@
     <option value="Amager">Amager</option>
   </select>
 </div>
+
 <hr>
+
   <div class="register-field">
           <span>Please choose your top 3 out of the below interests?</span>
           <br>
@@ -77,7 +83,9 @@
           <i class="fa-solid fa-person-biking"></i>
           <label for="Sports">Sports</label> 
   </div>
+
 <hr>
+
   <div class="register-field">
           <span>With how many people do like to be matched with for the start?</span>
           <br>
@@ -88,12 +96,14 @@
           <input type="radio" id="num_matches" name="num_matches" value="3">        
           <label for="3">3</label>
   </div>
-   <div class="btn-field">
-  <button type="submit" value="submit" id="submitreg" >Submit</button>
+
+  <div class="btn-field">
+    <button type="submit" onclick="location.href='home.html'" id="submitreg" >Continue</button>
   </div>
 </form>
-</div>
 
-    </p>
+</div>
+<!-- put script for JS at end of body section -->
+<script src="index.js"></script>
   </body>
 </html>

@@ -11,6 +11,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
+
   <body>
     <div class="container"></div>
     <div class="form-box">
@@ -21,53 +22,11 @@
         style="width: 100px; height: 100px"
       />
       <h2 id="intro">Welcome to Amica</h2>
-      <h1 id="title">Sign up</h1>
-      <form action="/index.html" id= "registerForm" method="POST">
-        <div class="input-group">
-          <div class="input-field" id="firstNameField">
-            <i class="fa-regular fa-user"></i>
-            <input type="text" id="firstNameInput" placeholder="First name" required />
-          </div>
-
-          <div class="input-field" id="lastNameField">
-            <i class="fa-regular fa-user"></i>
-            <input type="text" id="lastNameInput" placeholder="Last name" required />
-          </div>
-
-          <div class="input-field" id="nameField">
-            <i class="fa-regular fa-user"></i>
-            <input type="text" id="usernameInput" placeholder="User name" required />
-          </div>
-
-          <div class="input-field" id="emailField">
-            <i class="fa-regular fa-envelope"></i>
-            <input type="email" id="emailInput" placeholder="Email" required />
-          </div>
-
-          <div class="input-field" id="passwordField">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" placeholder="Password" required />
-          </div>
-          <p></p>
-
-          <div class="input-field" id="confirmPasswordField">
-            <i class="fa-solid fa-lock"></i>
-            <input type="password" id="passwordInput" placeholder="Confirm your password" required
-            />
-          </div>
-          <p>
-            Forgot your password? <a href="#"> Set up a new password here</a>
-          </p>
-        </div>
-        <div class="btn-field">
-          <button type="submit" formaction="register.html" id="signupBtn">
-            Sign up
-          </button>
-          <button type="submit" id="signinBtn" class="disable">Log in</button>
-        </div>
-      </form>
+      <div class="btn-field">
+      <button type="button" onclick="location.href='sign-up.html'">Sign up</button>
+      <button type="button" onclick="location.href='log-in.html'">Log in</button>
+      </div>
     </div>
-    <!-- put script for JS at end of body section -->
-    <script src="index.js"></script>
-  </body>
+
+    </body>
 </html>
