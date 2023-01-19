@@ -26,45 +26,45 @@
       <form action="/reg_data.php" id= "registerForm" method="POST">
 
         <div class="input-group">
-          <div class="input-field" id="firstNameField">
+          <div class="input-field">
             <i class="fa-regular fa-user"></i>
-            <input type="text" id="firstNameInput" placeholder="First name" required />
+            <input type="text" id="firstNameInput-signUp" placeholder="First name" required />
           </div>
 
-          <div class="input-field" id="lastNameField">
+          <div class="input-field">
             <i class="fa-regular fa-user"></i>
-            <input type="text" id="lastNameInput" placeholder="Last name" required />
+            <input type="text" id="lastNameInput-signUp" placeholder="Last name" required />
           </div>
 
-          <div class="input-field" id="nameField">
+          <div class="input-field">
             <i class="fa-regular fa-user"></i>
-            <input type="text" id="usernameInput" placeholder="User name" required />
+            <input type="text" id="usernameInput-signUp" placeholder="User name" required />
           </div>
 
-          <div class="input-field" id="emailField">
+          <div class="input-field">
             <i class="fa-regular fa-envelope"></i>
-            <input type="email" id="emailInput" placeholder="Email" required />
+            <input type="email" id="emailInput-signUp" placeholder="Email" required />
           </div>
 
-          <div class="input-field" id="passwordField">
+          <div class="input-field">
             <i class="fa-solid fa-lock"></i>
             <input type="password" placeholder="Password" required />
           </div>
 
           <p></p>
 
-          <div class="input-field" id="confirmPasswordField">
+          <div class="input-field">
             <i class="fa-solid fa-lock"></i>
-            <input type="password" id="passwordInput" placeholder="Confirm your password" required/>
+            <input type="password" id="passwordInput-signUp" placeholder="Confirm your password" required/>
           </div>
         </div>
 
         <div class="btn-field">
-          <button type="submit" onclick="location.href='register.html'" id="signupBtn">Sign up</button>
+          <button type="submit" id="signupBtn">Sign up</button>
         </div>
       </form>
     </div>
     <!-- put script for JS at end of body section -->
-    <script src="index.js"></script>
+    <script src="sign-up.js"></script>
   </body>
 </html>
