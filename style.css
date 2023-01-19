@@ -10,7 +10,7 @@ h1 {
     font-size: 30px;
     position: relative;
     text-align: center;
-    padding-top: 15px;
+    padding-top: 10px;
     padding-bottom: 15px;
 }
 
@@ -46,7 +46,7 @@ p {
     left: 50%;
     transform: translate(-50%,-50%);
     background: #EC3C54;
-    padding: 50px 60px 70px;
+    padding: 150px 60px 70px;
     text-align: center;
 }
 
@@ -157,10 +157,10 @@ img
 
 .register-box
 {
-    width: 90%;
+    width: 100%;
     max-width: 750px;
     position: absolute;
-    top: 103%;
+    top: 115%;
     left: 50%;
     transform: translate(-50%, -50%);
     background: #EC3C54;
@@ -198,9 +198,8 @@ select {
         background: #EC3C54;
         padding: 50px 60px 70px;
         text-align: center;
-        
-            display: flex;
-            justify-content: space-between;
+        display: flex;
+        justify-content: space-between;
 }
 .action-button button {
     background: #F09C14;
