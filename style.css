@@ -222,3 +222,19 @@ button i {
     margin-right: 5px;
     background: #F09C14;
 }
+
+.error {
+    font-weight: bold;
+    background-color: #ffb3b3;
+    padding: 10px;
+    border-radius: 5px;
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {transform: translateX(0px);}
+    25% {transform: translateX(-10px);}
+    50% {transform: translateX(10px);}
+    75% {transform: translateX(-5px);}
+    100% {transform: translateX(0px);}
+}

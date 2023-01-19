@@ -9,13 +9,16 @@ function registerUser(event) {
     var userFromLocalStorage = JSON.parse(localStorage.getItem(usernameInput));
 
     if(!userFromLocalStorage) {
-        console.log('User does not exist. Please try again.')
+        var usernameError = document.getElementById("usernameError");
+        usernameError.innerHTML = "User does not exist. Please try again.";
     }
 
     var passwordInput = document.getElementById("passwordInput-logIn").value;
 
     if(userFromLocalStorage.password !== passwordInput) {
-        console.log('Invalid password. Please try again.')
+        var passwordError = document.getElementById("passwordError");
+        passwordError.innerHTML = "Invalid password. Please try again.";
+
     } else {
         console.log('Logged in successfully.')
         location.href = "register.html";
