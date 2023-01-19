@@ -26,3 +26,32 @@ signupBtn.onclick = function(){
     signinBtn.classList.add("disable");
 }
 
+const signupForm = document.getElementById("registerForm")
+signupForm.addEventListener('submit', registerUser)
+
+function registerUser(event) {
+    event.preventDefault()
+    const firstNameUser = document.getElementById('firstNameInput')
+    const lastNameUser = document.getElementById('lastNameInput')
+    const usernameUser = document.getElementById('usernameInput')
+    const emailUser = document.getElementById('emailInput')
+    const passwordUser = document.getElementById('passwordInput')
+
+    const first = firstNameUser.value;
+    const last = lastNameUser.value;
+    const username = usernameUser.value;
+    const email = emailUser.value;
+    const password = passwordUser.value;
+
+    const userData = {
+        firstName: first,
+        lastName: last,
+        userName: username,
+        email: email,
+        password: password,
+    }
+
+    const userDataString = JSON.stringify(userData);
+
+    localStorage.setItem("userData", userDataString);
+}
