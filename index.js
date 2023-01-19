@@ -14,8 +14,6 @@ signinBtn.onclick = function(){
     intro.innerHTML = "Welcome to Amica";
     signupBtn.classList.add("disable");
     signinBtn.classList.remove("disable");
-    location.assign("register.html");
-    location.href = "register.html";
 }
 
 signupBtn.onclick = function(){
@@ -26,8 +24,6 @@ signupBtn.onclick = function(){
     intro.innerHTML = "Join us and find new connections in your area. Create your free Amica account";
     signupBtn.classList.remove("disable");
     signinBtn.classList.add("disable");
-    location.assign("register.html");
-    location.href = "register.html";
 }
 
 const signupForm = document.getElementById("registerForm")
@@ -57,5 +53,5 @@ function registerUser(event) {
 
     const userDataString = JSON.stringify(userData);
 
-    localStorage.setItem("userData", userDataString);
+    localStorage.setItem(userData.userName, userDataString);
 }
