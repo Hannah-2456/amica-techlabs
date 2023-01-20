@@ -177,6 +177,31 @@ img {
     overflow: hidden;
 }
 
+input[type="radio"]{
+    font-size: 18px;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    transform: translateY(-0.075em);
+}
+
+.form-control {
+    text-align: center;
+    line-height: 1.1;
+    display: grid;
+    grid-template-columns: 3em auto;
+    gap: 0.5em;
+}
+
+.form-control+.form-control {
+    margin-top: 1em;
+}
+
 select {
     width: 100%;
     padding: 10px;
