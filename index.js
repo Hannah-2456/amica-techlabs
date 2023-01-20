@@ -1,15 +1,15 @@
 
-function getUserFirstName() {
+export function getUserFirstName() {
     var currentUsername = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
     return currentUsername.firstName;
 }
 
-function getUserLaseName() {
+export function getUserLaseName() {
     var currentUsername = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
     return currentUsername.lastName;
 }
 
-function getUserUsername() {
+export function getUserUsername() {
     var currentUsername = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
     return currentUsername.userName;
 }
