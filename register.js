@@ -16,6 +16,14 @@ function editUser(event) {
     let location = document.getElementById("location").value;
     objectUser['location'] = location;
 
+    var markedCheckbox = document.querySelectorAll('input[type="checkbox"]:checked');
+    var allInterests = [];
+    for (var checkbox of markedCheckbox) {
+        allInterests.push(checkbox.value);
+        }
+    objectUser['interests'] = allInterests;
+
+
 
 
     localStorage.setItem(objectUser.userName, JSON.stringify(objectUser));
