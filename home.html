@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <title>Home</title>
-    <script
-      src="https://kit.fontawesome.com/656b90b3b2.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/656b90b3b2.js" crossorigin="anonymous"></script>
   </head>
   <body>
     <img
@@ -18,10 +15,13 @@
       alt="Amica Logo"
       style="width: 100px; height: 100px"
     />
-    <h1>
-      Hello <span id="firstNameInput">____</span>! We are happy that you are
-      here!
-    </h1>
+    <h1>Hello
+      <span id="displayName">
+        <script type = "module">import {getUserFirstName} from './index.js';
+        document.getElementById("displayName").innerHTML = getUserFirstName();
+        </script>
+        </span>! We are happy that you are here!
+      </h1>
     <h2>What do you want to do?</h2>
     <div class="action-fields"></div>
     <div class="action-button">
