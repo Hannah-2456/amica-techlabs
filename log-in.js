@@ -1,5 +1,5 @@
-const signupForm = document.getElementById("logInForm")
-signupForm.addEventListener('submit', registerUser)
+const logInForm = document.getElementById("logInForm")
+logInForm.addEventListener('submit', registerUser)
 
 function registerUser(event) {
     event.preventDefault()
