@@ -5,6 +5,8 @@ function checkUser(event) {
     event.preventDefault()
 
     var usernameInput = document.getElementById("usernameInput-logIn").value;
+
+    sessionStorage.setItem("currentUser", usernameInput);
     
     var userFromLocalStorage = JSON.parse(localStorage.getItem(usernameInput));
 
