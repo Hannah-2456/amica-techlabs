@@ -1,7 +1,7 @@
 const logInForm = document.getElementById("logInForm")
-logInForm.addEventListener('submit', registerUser)
+logInForm.addEventListener('submit', checkUser)
 
-function registerUser(event) {
+function checkUser(event) {
     event.preventDefault()
 
     var usernameInput = document.getElementById("usernameInput-logIn").value;
