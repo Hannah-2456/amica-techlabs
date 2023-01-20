@@ -12,6 +12,7 @@ function registerUser(event) {
     const first = firstNameUser.value;
     const last = lastNameUser.value;
     const username = usernameUser.value;
+    sessionStorage.setItem("currentUser", username);
     const email = emailUser.value;
     const password = passwordUser.value;
 
