@@ -27,8 +27,5 @@ function editUser(event) {
     objectUser['number of matches'] = numberOfMatches;
 
     localStorage.setItem(objectUser.userName, JSON.stringify(objectUser));
-
-    location.href = "home.html";
-
-
+    window.location.href = "home.html";
 }
