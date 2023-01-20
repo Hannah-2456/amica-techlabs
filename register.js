@@ -8,10 +8,13 @@ function editUser(event) {
     var objectUser = JSON.parse(localStorage.getItem(sessionStorage.getItem("currentUser")));
 
     let birthday = document.getElementById("birthday").value;
-    objectUser['birthday'] = birthday.toString();
+    objectUser['birthday'] = birthday;
 
     let gender = document.querySelector('input[name="gender"]:checked').value;
     objectUser['gender'] = gender;
+
+    let location = document.getElementById("location").value;
+    objectUser['location'] = location;
 
 
 
