@@ -228,7 +228,7 @@ button i {
     background-color: #ffb3b3;
     padding: 10px;
     border-radius: 5px;
-    animation: shake 0.5s;
+    animation: shake 3s;
 }
 
 @keyframes shake {
