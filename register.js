@@ -23,12 +23,12 @@ function editUser(event) {
         }
     objectUser['interests'] = allInterests;
 
-
-
+    let numberOfMatches = document.querySelector('input[name="num_matches"]:checked').value;
+    objectUser['number of matches'] = numberOfMatches;
 
     localStorage.setItem(objectUser.userName, JSON.stringify(objectUser));
 
-    console.log("done");
+    location.href = "home.html";
 
 
 }
