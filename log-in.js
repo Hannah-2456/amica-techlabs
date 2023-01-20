@@ -23,6 +23,6 @@ function checkUser(event) {
 
     } else {
         console.log('Logged in successfully.')
-        location.href = "register.html";
+        location.href = "home.html";
     }
 }
