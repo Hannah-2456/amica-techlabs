@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <script
+      src="https://kit.fontawesome.com/656b90b3b2.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="container"></div>
+    <div class="form-box">
+      <img
+        id="logo"
+        src="Amica01.png"
+        alt="Amica Logo"
+        style="width: 100px; height: 100px"
+      />
+      <h2 id="intro">Welcome to Amica</h2>
+      <h1 id="title">Log in</h1>
+      <form id="logInForm" method="GET">
+        <div class="input-field">
+          <i class="fa-regular fa-user"></i>
+          <input
+            type="text"
+            id="usernameInput-logIn"
+            placeholder="User name"
+            required
+          />
+          <div class="error" id="usernameError"></div>
+        </div>
+
+        <div class="input-field">
+          <i class="fa-solid fa-lock"></i>
+          <input
+            type="password"
+            id="passwordInput-logIn"
+            placeholder="Password"
+            required
+          />
+          <div class="error" id="passwordError"></div>
+        </div>
+        <p>Forgot your password? <a href="#"> Set up a new password here</a></p>
+        <br />
+        <div class="btn-field">
+          <button type="submit" id="logInBtn">Log in</button>
+        </div>
+      </form>
+    </div>
+    <!-- put script for JS at end of body section -->
+    <script src="log-in.js"></script>
+  </body>
+</html>
