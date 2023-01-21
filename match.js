@@ -47,27 +47,27 @@ const matchMaker = Object.setPrototypeOf(JSON.parse(window.localStorage.getItem(
 const profileSection = document.getElementById("profileInfo")
 const matchSection = document.getElementById("matches")
 
-profileSection.innerHTML = "Name: " + currentUser.firstName + " " + currentUser.lastName + "<br/>"
-profileSection.innerHTML += "Username: " + currentUser.userName + "<br/>"
-profileSection.innerHTML += "Mail: " + currentUser.email + "<br/>"
-profileSection.innerHTML += "Age: " + currentUser.age + "<br/>"
-profileSection.innerHTML += "Gender: " + currentUser.gender + "<br/>"
-profileSection.innerHTML += "Interests: " + currentUser.interests.join(", ") + "<br/>"
-profileSection.innerHTML += "Location: " + currentUser.location + "<br/>"
-profileSection.innerHTML += "Requested Matches: " + currentUser.num_matches + "<br/>"
+//profileSection.innerHTML = "Name: " + currentUser.firstName + " " + currentUser.lastName + "<br/>"
+//profileSection.innerHTML += "Username: " + currentUser.userName + "<br/>"
+//profileSection.innerHTML += "Mail: " + currentUser.email + "<br/>"
+//profileSection.innerHTML += "Age: " + currentUser.age + "<br/>"
+//profileSection.innerHTML += "Gender: " + currentUser.gender + "<br/>"
+//profileSection.innerHTML += "Interests: " + currentUser.interests.join(", ") + "<br/>"
+//profileSection.innerHTML += "Location: " + currentUser.location + "<br/>"
+profileSection.innerHTML += "You requested " + currentUser.num_matches + " match(es)" + "<br/>"
 
 matchSection.innerHTML = ""
 const matches = matchMaker.matchMakingNames(currentUser)
 for (let i = 0; i < currentUser.num_matches; i++) {
     const matchedUser = matches[i]
     matchSection.innerHTML += "<p>"
-    matchSection.innerHTML += "Your matche's name: " + matchedUser.firstName + " " + matchedUser.lastName + "<br/>"
+    matchSection.innerHTML += "Your match's name is: <b>" + matchedUser.firstName + "</b> <b>" + matchedUser.lastName + "</b> <br/>"
     matchSection.innerHTML += "Age: " + matchedUser.age + "<br/>"
     // matchSection.innerHTML += "Username: " + matchedUser.userName + "<br/>"
     matchSection.innerHTML += "Gender: " + matchedUser.gender + "<br/>"
-    matchSection.innerHTML += "Interests: " + matchedUser.interests.join(", ") + "<br/>"
     matchSection.innerHTML += "Your match comes from: " + matchedUser.location + "<br/>"
-    matchSection.innerHTML += "<b>Match Score: " + matchMaker.matchMakingScores(currentUser)[i] + "</b><br/>"
-    matchSection.innerHTML += "Take a chance! Contact your match via Mail: " + mailto:matchedUser.email + "<br/>"
+    matchSection.innerHTML += "Interests: " + matchedUser.interests.join(", ") + "<br/>"
+    matchSection.innerHTML += "<b>Match Score: " + matchMaker.matchMakingScores(currentUser)[i] + "</b><br/></b><br/>"
+    matchSection.innerHTML += "Take a chance! Contact your match via Mail: <a href='mailto:" + matchedUser.email + "'>" + matchedUser.email + "</a>"
     matchSection.innerHTML += "</p><hr><br/>"
 }
