@@ -61,13 +61,13 @@ const matches = matchMaker.matchMakingNames(currentUser)
 for (let i = 0; i < currentUser.num_matches; i++) {
     const matchedUser = matches[i]
     matchSection.innerHTML += "<p>"
-    matchSection.innerHTML += "Name: " + matchedUser.firstName + " " + matchedUser.lastName + "<br/>"
-    matchSection.innerHTML += "Username: " + matchedUser.userName + "<br/>"
-    matchSection.innerHTML += "Mail: " + matchedUser.email + "<br/>"
+    matchSection.innerHTML += "Your matche's name: " + matchedUser.firstName + " " + matchedUser.lastName + "<br/>"
     matchSection.innerHTML += "Age: " + matchedUser.age + "<br/>"
+    // matchSection.innerHTML += "Username: " + matchedUser.userName + "<br/>"
     matchSection.innerHTML += "Gender: " + matchedUser.gender + "<br/>"
     matchSection.innerHTML += "Interests: " + matchedUser.interests.join(", ") + "<br/>"
-    matchSection.innerHTML += "Location: " + matchedUser.location + "<br/>"
+    matchSection.innerHTML += "Your match comes from: " + matchedUser.location + "<br/>"
     matchSection.innerHTML += "<b>Match Score: " + matchMaker.matchMakingScores(currentUser)[i] + "</b><br/>"
+    matchSection.innerHTML += "Take a chance! Contact your match via Mail: " + mailto:matchedUser.email + "<br/>"
     matchSection.innerHTML += "</p><hr><br/>"
 }
