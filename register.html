@@ -12,12 +12,13 @@
     ></script>
   </head>
   <body>
-    <div class="container">
-      <img
+    <div class="container"></div>
+    <img
       id="logo"
       src="Amica01.png"
       alt="Amica Logo"
-      style="width: 80px; height: 80px">
+      style="width: 100px; height: 100px"
+    />
 
     <div class="register-box">
       <form action="home.html" method="GET">
@@ -27,127 +28,106 @@
           you with someone that could become your friend:
         </h2>
         <div class="register-field">
-          <label for="birthday">Please enter your birthday</label><p>
+          <label for="birthday"> Please provide your birthday: </label>
           <input type="date" id="birthday" name="birthday" required />
         </div>
         <hr />
         <div class="register-field">
           <span>Please define your gender</span>
-          <br/>
-          <label class="form-control">
-            <input type="radio" id="female" name="gender" value="female" />
-            <label for="female">Female</label>
-            <input type="radio" id="male" name="gender" value="male" />
-            <label for="male">Male</label>
-            <input type="radio" id="norespond" name="gender" value="norespond" />
-            <label for="norespond">Prefer not to respond</label>
-          </label>
+          <br />
+          <label for="female">female</label>
+          <input type="radio" id="female" name="gender" value="female" />
+          <label for="male">male</label>
+          <input type="radio" id="male" name="gender" value="male" />
+          <label for="norespond">Prefer not to respond</label>
+          <input type="radio" id="norespond" name="gender" value="norespond" />
         </div>
         <hr />
         <div class="register-field">
           <label for="location">Where in Copenhagen do you live?</label>
-        </br><br>
           <select id="location" name="location" required>
-            <option value="Indre By" selected>Indre By</option>
-            <option value="Vesterbro">Vesterbro</option>
+            <option value="Vesterbro" selected>Vesterbro</option>
+            <option value="Valby">Valby</option>
             <option value="Nørrebro">Nørrebro</option>
             <option value="Østerbro">Østerbro</option>
-            <option value="Amager Øst">Amager Øst</option>
-            <option value="Amager Vest">Amager Vest</option>
-            <option value="Valby">Valby</option>
-            <option value="Bispebjerg">Bispebjerg</option>
-            <option value="Vanløse">Vanløse</option>
-            <option value="Brønshøj-Husum">Brønshøj-Husum</option>
+            <option value="Amager">Amager</option>
           </select>
         </div>
         <hr />
         <div class="register-field">
-          <span>Please choose your top 3 interests</span>
-          <br /><br>
-          <label class="form-control">
-            <i class="fa-solid fa-mug-saucer"></i>
-            <label for="Coffee or Tea">Coffee or Tea</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Coffee or Tea"
-              value="Coffee or Tea"
-            />
-            <p></p>
-            <i class="fa-solid fa-shoe-prints"></i>
-            <label for="Walks">Walks</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Going for walks"
-              value="Walks"
-            />
-            <p></p>
-            <i class="fa-solid fa-utensils"></i>
-            <label for="Cooking">Cooking</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Cooking"
-              value="Cooking"
-            />
-            <p></p>
-            <i class="fa-solid fa-book-open"></i>
-            <label for="Reading">Reading</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Reading"
-              value="Reading"
-            />
-            <p></p>
-            <i class="fa-solid fa-music"></i>
-            <label for="Concerts">Concerts</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Concerts"
-              value="Concerts"
-            />
-            <p></p>
-            <i class="fa-solid fa-masks-theater"></i>
-            <label for="Theater">Theater</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Theater"
-              value="Theater"
-            />
-            <p></p>
-            <i class="fa-solid fa-person-biking"></i>
-            <label for="Sports">Sports</label>
-            <input
-              type="checkbox"
-              name="interests"
-              id="Sports"
-              value="Sports"
-            />
-          </label>
+          <span>Please choose your top 3 out of the below interests?</span>
+          <br />
+
+          <input
+            type="checkbox"
+            name="interests"
+            id="Coffee or Tea"
+            value="Coffee or Tea"
+          />
+          <i class="fa-solid fa-mug-saucer"></i>
+          <label for="Coffee or Tea">Coffee or Tea</label>
+          <input
+            type="checkbox"
+            name="interests"
+            id="Going for walks"
+            value="Going for walks"
+          />
+          <i class="fa-solid fa-shoe-prints"></i>
+          <label for="Going for walks">Going for walks</label>
+          <input
+            type="checkbox"
+            name="interests"
+            id="Cooking"
+            value="Cooking"
+          />
+          <i class="fa-solid fa-utensils"></i>
+          <label for="Cooking">Cooking</label>
+          <input
+            type="checkbox"
+            name="interests"
+            id="Reading"
+            value="Reading"
+          />
+          <i class="fa-solid fa-book-open"></i>
+          <label for="Reading">Reading</label>
+          <input
+            type="checkbox"
+            name="interests"
+            id="Concerts"
+            value="Concerts"
+          />
+          <i class="fa-solid fa-music"></i>
+          <label for="Concerts">Concerts</label>
+          <input
+            type="checkbox"
+            name="interests"
+            id="Theater"
+            value="Theater"
+          />
+          <i class="fa-solid fa-masks-theater"></i>
+          <label for="Theater">Theater</label>
+          <input type="checkbox" name="interests" id="Sports" value="Sports" />
+          <i class="fa-solid fa-person-biking"></i>
+          <label for="Sports">Sports</label>
         </div>
         <hr />
         <div class="register-field">
-          <span>With how many people would you like to be matched with for the
-            start?</span>
-          <br /><br>
-          <label class="form-control">
-            <input type="radio" id="n1" name="num_matches" value="1" />
-            <label for="n1">1</label>
-            <input type="radio" id="n2" name="num_matches" value="2" />
-            <label for="n2">2</label>
-            <input type="radio" id="n3" name="num_matches" value="3" />
-            <label for="n3">3</label>
-          </label>
+          <span
+            >With how many people do like to be matched with for the
+            start?</span
+          >
+          <br />
+          <label for="n1">1</label>
+          <input type="radio" id="n1" name="num_matches" value="1" />
+          <label for="n2">2</label>
+          <input type="radio" id="n2" name="num_matches" value="2" />
+          <label for="n3">3</label>
+          <input type="radio" id="n3" name="num_matches" value="3" />
         </div>
         <div class="btn-field">
-          <button type="submit" value="submit" id="submitReg">Continue</button>
+          <button type="submit" value="submit" id="submitReg">Submit</button>
         </div>
       </form>
-    </div>
     </div>
     <script src="datamodel.js"></script>
     <script src="register.js"></script>

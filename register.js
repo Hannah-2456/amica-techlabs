@@ -20,7 +20,7 @@ if (!window.localStorage.getItem("registeringUser")) {
 
 const registeringUser = JSON.parse(window.localStorage.getItem("registeringUser"))
 
-registerTitle.innerText = registerTitle.innerText.replace("USER", registeringUser.firstName)
+registerTitle.innerText = registerTitle.innerText.replace("USER", registeringUser.firstName + " " + registeringUser.lastName)
 
 function calculate_age(dob) {
     const diff_ms = Date.now() - Date.parse(dob);
@@ -41,7 +41,6 @@ submitReg.onclick = function () {
     }
 
     registeringUser.location = locationSelect.value
-    
     registeringUser.interests = []
     for (const interest of allInterests) {
         if (document.getElementById(interest).checked) {
