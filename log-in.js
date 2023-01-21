@@ -1,28 +1,42 @@
 const logInForm = document.getElementById("logInForm")
-logInForm.addEventListener('submit', checkUser)
+logInForm.addEventListener('submit', logUser)
 
-function checkUser(event) {
+function logUser(event) {
     event.preventDefault()
 
     var usernameInput = document.getElementById("usernameInput-logIn").value;
-
-    sessionStorage.setItem("currentUser", usernameInput);
-    
-    var userFromLocalStorage = JSON.parse(localStorage.getItem(usernameInput));
-
-    if(!userFromLocalStorage) {
-        var usernameError = document.getElementById("usernameError");
-        usernameError.innerHTML = "User does not exist. Please try again.";
-    }
-
     var passwordInput = document.getElementById("passwordInput-logIn").value;
+    var usernameError = document.getElementById("usernameError");
+    var passwordError = document.getElementById("passwordError");
 
-    if(userFromLocalStorage.password !== passwordInput) {
-        var passwordError = document.getElementById("passwordError");
-        passwordError.innerHTML = "Invalid password. Please try again.";
+    if (window.localStorage.getItem("registeringUser")) {
+        const registeringUser = JSON.parse(window.localStorage.getItem("registeringUser"));
+        usernameError.innerHTML = "";
+        passwordError.innerHTML ="";
 
-    } else {
-        console.log('Logged in successfully.')
-        location.href = "home.html";
+        if (usernameInput !== registeringUser.userName) {
+            usernameError.innerHTML = "User does not exist. Please try again.";
+        }
+
+        if (passwordInput !== registeringUser.password) {
+            passwordError.innerHTML = "Invalid password. Please try again.";
+        } else {
+            window.location = "register.html"
+        }
+
+    } else if (window.localStorage.getItem("currentUser")) {
+        const currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
+        usernameError.innerHTML = "";
+        passwordError.innerHTML ="";
+
+        if (usernameInput !== currentUser.userName) {
+            usernameError.innerHTML = "User does not exist. Please try again.";
+        }
+
+        if (passwordInput !== currentUser.password) {
+            passwordError.innerHTML = "Invalid password. Please try again.";
+        } else {
+            window.location = "home.html"
+        }
     }
 }
