@@ -40,5 +40,9 @@ function logUser(event) {
         } else {
             window.location = "home.html"
         }
+    // If user have not started to register yet 
+    } else {
+        usernameError.innerHTML = "User does not exist. Please try again.";
+        passwordError.innerHTML = "Invalid password. Please try again.";
     }
 }
