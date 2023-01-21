@@ -9,6 +9,7 @@ function logUser(event) {
     var usernameError = document.getElementById("usernameError");
     var passwordError = document.getElementById("passwordError");
 
+    // If user didn't finish the registration
     if (window.localStorage.getItem("registeringUser")) {
         const registeringUser = JSON.parse(window.localStorage.getItem("registeringUser"));
         usernameError.innerHTML = "";
@@ -23,7 +24,8 @@ function logUser(event) {
         } else {
             window.location = "register.html"
         }
-
+    
+    // If user finished the registration
     } else if (window.localStorage.getItem("currentUser")) {
         const currentUser = JSON.parse(window.localStorage.getItem("currentUser"));
         usernameError.innerHTML = "";
