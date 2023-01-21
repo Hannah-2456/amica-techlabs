@@ -160,7 +160,7 @@ const lastNames = [
 
 const allInterests = [
     "Coffee or Tea",
-    "Going for walks",
+    "Walks",
     "Cooking",
     "Reading",
     "Concerts",
@@ -169,9 +169,14 @@ const allInterests = [
 ]
 
 const allLocations = [
+    "Indre By",
     "Vesterbro",
-    "Valby",
     "Nørrebro",
     "Østerbro",
-    "Amager"
+    "Amager Øst",
+    "Amager Vest",
+    "Valby",
+    "Bispebjerg", 
+    "Vanløse",
+    "Brønshøj-Husum"
 ]

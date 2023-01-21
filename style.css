@@ -179,7 +179,7 @@ img {
 
 .register-field {
     font-size: 15px;
-    padding: 18px 15px;
+    padding: 20px 10px;
     margin: 10px 0;
     font-size: 18px;
     box-sizing: border-box;
@@ -199,14 +199,31 @@ input[type="radio"]{
     border: 0.15em solid currentColor;
     border-radius: 50%;
     transform: translateY(-0.075em);
+    position: relative;
+    top: 5px;
+    display: inline-block;
+    margin: 7px;
+    padding: 7px;
 }
 
 .form-control {
     text-align: center;
     line-height: 1.1;
-    display: grid;
+
+    padding: 7px;
     grid-template-columns: 3em auto;
     gap: 0.5em;
+}
+
+label {
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+  }
+
+
+input[type="checkbox"] {
+    margin: 10px;
 }
 
 .form-control+.form-control {
@@ -230,7 +247,6 @@ select {
     background: #EC3C54;
     padding: 50px 60px 70px;
     text-align: center;
-
     display: flex;
     justify-content: space-between;
 }
@@ -258,7 +274,7 @@ button i {
 }
 
 .error-message {
-    color: #ff0000; /* Red text color */
+    color: #ff0000;
     font-size: 12px;
     font-weight: bold;
     animation: shake 2s;
@@ -278,3 +294,68 @@ button i {
     90% { transform: translate(1px, 2px) rotate(0deg); }
     100% { transform: translate(1px, -2px) rotate(-1deg); }
   }
+
+
+  input[type="date"] {
+    font-size: 16px;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color:#ffffff;
+    
+  }
+  
+  /* Change the color of the date picker arrow */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    color: #3f51b5;
+  }
+  /* Change the color of the text in the date picker */
+  input[type="date"]::-webkit-inner-spin-button {
+    display: none;
+  }
+  input[type="date"]::-webkit-datetime-edit {
+    color: #000000;
+  }
+  /* Add hover effect to the input field */
+  input[type="date"]:hover {
+    border: 1px solid #ffffff;
+  }
+  /* Add focus effect to the input field */
+  input[type="date"]:focus {
+    outline: none;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+  }
+
+  select {
+    font-size: 16px;
+    padding: 13px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #ffffff;
+  }
+
+/* Change the color of the select option arrow */
+select::-ms-expand {
+    display: none;
+}
+
+/* Add hover effect to the select option */
+select:hover {
+    border: 1px solid #ffffff;
+}
+
+/* Add focus effect to the select option */
+select:focus {
+    outline: none;
+    border: 1px solid #ffffff;
+    box-shadow: 0 0 10px #ffffff;
+}

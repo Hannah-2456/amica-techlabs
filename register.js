@@ -41,6 +41,7 @@ submitReg.onclick = function () {
     }
 
     registeringUser.location = locationSelect.value
+    
     registeringUser.interests = []
     for (const interest of allInterests) {
         if (document.getElementById(interest).checked) {
