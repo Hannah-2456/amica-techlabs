@@ -29,10 +29,19 @@ p {
     text-align: center;
 }
 
+body {
+    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(Background.jpg);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
 .container {
     width: 100%;
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 50, 0.8), rgba(0, 0, 50, 0.8)), url(Background.jpg);
     background-position: center;
     background-size: cover;
     position: relative;
@@ -78,6 +87,7 @@ p {
 
 .input-field {
     background: lightgrey;
+    padding: 10px;
     border-radius: 3px;
     display: flex;
     align-items: center;
@@ -108,7 +118,8 @@ input {
 
 form p {
     color: white;
-    text-align: left;
+    text-align: center;
+    padding: 10px;
     font-size: 13px;
 }
 
@@ -246,32 +257,24 @@ button i {
     background: #F09C14;
 }
 
-.error {
+.error-message {
+    color: #ff0000; /* Red text color */
+    font-size: 12px;
     font-weight: bold;
-    background-color: #ffb3b3;
-    padding: 10px;
-    border-radius: 5px;
-    animation: shake 3s;
-}
+    animation: shake 2s;
+    animation-iteration-count: infinite;
+  }
 
-@keyframes shake {
-    0% {
-        transform: translateX(0px);
-    }
-
-    25% {
-        transform: translateX(-10px);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-
-    75% {
-        transform: translateX(-5px);
-    }
-
-    100% {
-        transform: translateX(0px);
-    }
-}
+  @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }

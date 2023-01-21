@@ -25,31 +25,31 @@
       <h1 id="title">Log in</h1>
       <form id="logInForm" method="GET">
         <div class="input-field">
-          <i class="fa-regular fa-user"></i>
+          <i class="fa-regular fa-user" style="padding-left:7px"></i>
           <input
             type="text"
             id="usernameInput-logIn"
-            placeholder="User name"
+            placeholder="Username"
             required
           />
-          <div class="error" id="usernameError"></div>
+          <span class="error-message" id="usernameError"></span>
         </div>
 
         <div class="input-field">
-          <i class="fa-solid fa-lock"></i>
+          <i class="fa-solid fa-lock" style="padding-left:7px"></i>
           <input
             type="password"
             id="passwordInput-logIn"
             placeholder="Password"
             required
           />
-          <div class="error" id="passwordError"></div>
+          <span class="error-message" id="passwordError"></span>
         </div>
-        <p>Forgot your password? <a href="#"> Set up a new password here</a></p>
         <br />
         <div class="btn-field">
           <button type="submit" id="logInBtn">Log in</button>
         </div>
+        <p class>Go to <a href="./sign-up.html">sign-up</a></p>
       </form>
     </div>
     <!-- put script for JS at end of body section -->

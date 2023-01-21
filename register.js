@@ -20,7 +20,7 @@ if (!window.localStorage.getItem("registeringUser")) {
 
 const registeringUser = JSON.parse(window.localStorage.getItem("registeringUser"))
 
-registerTitle.innerText = registerTitle.innerText.replace("USER", registeringUser.firstName + " " + registeringUser.lastName)
+registerTitle.innerText = registerTitle.innerText.replace("USER", registeringUser.firstName)
 
 function calculate_age(dob) {
     const diff_ms = Date.now() - Date.parse(dob);
