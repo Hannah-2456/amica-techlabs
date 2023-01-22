@@ -160,7 +160,7 @@ const lastNames = [
 
 const allInterests = [
     "Coffee or Tea",
-    "Walks",
+    "Going for walks",
     "Cooking",
     "Reading",
     "Concerts",
