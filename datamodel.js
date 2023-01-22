@@ -24,16 +24,16 @@ class MatchMaker {
     }
 
     matchMakingNames(user) {
-        if (user in this.matches) {
-            return this.matches[user]; // Return the stored matches for the user
+        if (user.userName in this.matches) {
+            return this.matches[user.userName]; // Return the stored matches for the user
         } else {
             return [];
         }
     }
 
     matchMakingScores(user) {
-        if (user in this.matches) {
-            return this.score[user]; // Return the stored scores for the user
+        if (user.userName in this.matches) {
+            return this.score[user.userName]; // Return the stored scores for the user
         } else {
             return [];
         }
@@ -46,7 +46,7 @@ class MatchMaker {
             let userMatches = [];
             for (let otherUser of this.users) {
                 // Skip the current user
-                if (otherUser === user) {
+                if (otherUser.userName === user.userName) {
                     continue;
                 }
 
@@ -70,16 +70,13 @@ class MatchMaker {
                 // Calculate score by addition
                 let matchScore = ageScore + commonInterests + locationScore;
 
-                // If match score is high enough, add otherUser to the matches list
-                if (matchScore > 0.5) {
-                    userMatches.push([otherUser, matchScore]);
-                }
+                userMatches.push([otherUser, matchScore]);
             }
 
             // Sort the matches list by score in descending order
             userMatches.sort((a, b) => b[1] - a[1]);
-            this.matches[user] = userMatches.slice(0, user.num_matches).map(match => match[0]);
-            this.score[user] = userMatches.slice(0, user.num_matches).map(match => match[1]);
+            this.matches[user.userName] = Object.assign({}, userMatches.slice(0, user.num_matches).map(match => match[0]));
+            this.score[user.userName] = Object.assign({}, userMatches.slice(0, user.num_matches).map(match => match[1]));
         }
     }
 }

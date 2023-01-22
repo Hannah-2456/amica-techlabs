@@ -20,6 +20,13 @@ function createDummyMatcher() {
         const firstName = getRandomFromArray(firstNames)
         const lastName = getRandomFromArray(lastNames)
         const mail = firstName + "." + lastName + "@mail.com"
+
+        //If the same mail already exists, try again
+        if (dummyUsers.find(u => u.email === mail)) {
+            i--
+            continue
+        }
+
         const password = "password" + i
 
         const gender = getRandomFromArray(["female", "male", "norespond"])
